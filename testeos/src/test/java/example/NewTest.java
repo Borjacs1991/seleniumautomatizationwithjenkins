@@ -72,8 +72,15 @@ public class NewTest {
 	    fileAppender.activateOptions();
 	    
 	    // Selenium
-		System.setProperty("webdriver.firefox.bin","C:\\Program Files\\Mozilla Firefox\\firefox.exe");
-		WebDriver driver = new FirefoxDriver();
+		 System.setProperty("webdriver.gecko.driver", "C:\\Driver\\geckodriver.exe");
+		 WebDriver driver = new FirefoxDriver();
+		 driver.get(google);
+		 
+		 try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		
 		// Selenium actions
 		driver.navigate().to(google);
