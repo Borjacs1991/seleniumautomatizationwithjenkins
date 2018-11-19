@@ -13,9 +13,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.session.InternetExplorerFilter;
 import org.testng.annotations.Test;
 
 public class IETest {
@@ -40,7 +40,7 @@ public class IETest {
 		// Selenium
 		File file = new File("C:\\Driver\\iedriver.exe");
 		System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
-		WebDriver driver = (WebDriver) new InternetExplorerFilter();
+		WebDriver driver = new InternetExplorerDriver();
 		driver.get(google);
 		driver.navigate().to(google);
 		System.out.println("Navigated to " + google);
