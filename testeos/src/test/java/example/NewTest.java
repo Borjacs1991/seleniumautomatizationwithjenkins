@@ -71,7 +71,7 @@ public class NewTest {
 	    fileAppender.activateOptions();
 	    
 	    // Selenium
-		System.setProperty("webdriver.chrome.driver","C:\\Driver\\geckodriver.exe");
+		System.setProperty("webdriver.firefox.driver","C:\\Driver\\geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
 		
 		// Selenium actions
@@ -87,6 +87,7 @@ public class NewTest {
 		}
 		
 		driver.close();
+		
   }
   
   @Test
