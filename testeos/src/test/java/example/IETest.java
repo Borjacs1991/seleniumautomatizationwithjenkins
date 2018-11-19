@@ -46,7 +46,7 @@ public class IETest {
 		// Selenium
 		File file = new File("C:\\Driver\\iedriver.exe");
 		System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
-		WebDriver driver = new InternetExplorerDriver();
+		WebDriver driver = new InternetExplorerDriver(capabilities);
 		driver.get(google);
 		driver.navigate().to(google);
 		System.out.println("Navigated to " + google);
