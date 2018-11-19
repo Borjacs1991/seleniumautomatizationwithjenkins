@@ -53,6 +53,7 @@ public class NewTest {
 		}
 		
 		driver.close();
+		driver.quit();
 	    
   }
   
