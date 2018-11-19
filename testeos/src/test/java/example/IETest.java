@@ -44,8 +44,8 @@ public class IETest {
 		driver.get(google);
 		driver.navigate().to(google);
 		System.out.println("Navigated to " + google);
+		System.out.println("IE");
 		// Selenium actions
-
 		final String query = "q";
 		final String queryText = "Spring";
 		driver.findElement(By.name(query)).sendKeys(queryText);
