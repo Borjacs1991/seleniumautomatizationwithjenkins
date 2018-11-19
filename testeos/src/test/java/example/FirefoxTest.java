@@ -14,12 +14,5 @@ public class FirefoxTest {
 	 WebDriver driver = new FirefoxDriver();
 	 driver.get("http://www.toolsqa.com");
 	 //driver.get(google);
-	 
-	 try {
-		Thread.sleep(5000);
-	} catch (InterruptedException e) {
-		e.printStackTrace();
-	}
-	 driver.quit();
 	}
 }
