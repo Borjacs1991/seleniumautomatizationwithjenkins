@@ -24,7 +24,7 @@ public class IETest {
 	public void sendTestIE() {
 
 		// Selenium
-		File file = new File("C:\\\\Driver\\\\IEDriverServer.exe");
+		File file = new File("C:\\Driver\\iedriver.exe");
 		System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
 		WebDriver driver = new InternetExplorerDriver();
 

@@ -24,7 +24,7 @@ public class FirefoxTest {
 	
 	@Test
 	public void sendFirefoxTestBinary() {
-	 System.setProperty("webdriver.firefox.bin", "C:\\Driver\\geckodriver.exe");
+	 System.setProperty("webdriver.firefox.bin", "C:\\Program Files\\Mozilla Firefox\\firefox.exe");
 	 WebDriver driver = new FirefoxDriver();
 	 driver.get(google);
 	 
