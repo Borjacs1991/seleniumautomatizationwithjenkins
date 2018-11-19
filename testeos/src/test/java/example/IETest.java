@@ -46,16 +46,14 @@ public class IETest {
 		driver.navigate().to(google);
 		driver.findElement(By.name("q")).sendKeys("Spring");
 		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
-
+/*
 		List<WebElement> results = driver.findElements(By.tagName("h3"));
 
 		for (int i = 0; i < results.size(); i++) {
 			System.out.println("Found: " + results.get(i).getText());
 			OurLogger.info(date + " Registered: " + i + ". Found:" + results.get(i).getText());
-		}
+		}*/
 
-		driver.close();
-		driver.quit();
 	}
 
 }
