@@ -2,6 +2,7 @@ package example;
 
 import java.io.File;
 import java.util.Date;
+import java.util.List;
 
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.FileAppender;
@@ -11,6 +12,7 @@ import org.apache.log4j.SimpleLayout;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.Test;
 
@@ -46,13 +48,15 @@ public class IETest {
 		final String queryText = "Spring";
 		driver.findElement(By.name(query)).sendKeys(queryText);
 		driver.findElement(By.name(query)).sendKeys(Keys.ENTER);
-/*
+		
+		System.out.println("Queries in input name " + query + " with value " + queryText);
+		
 		List<WebElement> results = driver.findElements(By.tagName("h3"));
 
 		for (int i = 0; i < results.size(); i++) {
 			System.out.println("Found: " + results.get(i).getText());
 			OurLogger.info(date + " Registered: " + i + ". Found:" + results.get(i).getText());
-		}*/
+		}
 
 	}
 
