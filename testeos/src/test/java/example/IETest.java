@@ -29,6 +29,7 @@ public class IETest {
 
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "IE");
 		capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+		capabilities.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION, true);
 
 		// Logger
 		Date date = new Date();
