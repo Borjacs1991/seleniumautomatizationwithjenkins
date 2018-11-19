@@ -59,6 +59,8 @@ public class IETest {
 			System.out.println("Found: " + results.get(i).getText());
 			OurLogger.info(date + " Registered: " + i + ". Found:" + results.get(i).getText());
 		}
+		
+		driver.close();
 
 	}
 
