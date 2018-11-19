@@ -27,19 +27,7 @@ public class IETest {
 		File file = new File("C:\\Driver\\iedriver.exe");
 		System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
 		WebDriver driver = new InternetExplorerDriver();
-
-		// Selenium actions
-		driver.navigate().to(google);
-		driver.findElement(By.name("q")).sendKeys("Spring");
-		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
-
-		List<WebElement> results = driver.findElements(By.tagName("h3"));
-
-		for (int i = 0; i < results.size(); i++) {
-			System.out.println("Found: " + results.get(i).getText());
-		}
-
-		driver.close();
+		driver.get(google);
 	}
 
 }
