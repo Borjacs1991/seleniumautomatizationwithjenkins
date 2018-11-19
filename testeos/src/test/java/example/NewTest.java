@@ -72,10 +72,8 @@ public class NewTest {
 	    fileAppender.activateOptions();
 	    
 	    // Selenium
-	    WebDriver driver=null;
-	    final FirefoxProfile firefoxProfile = new FirefoxProfile();
-	    firefoxProfile.setPreference("xpinstall.signatures.required", false);
-	    driver = new FirefoxDriver(firefoxProfile);
+		System.setProperty("webdriver.firefox.bin","C:\\Program Files\\Mozilla Firefox\\firefox.exe");
+		WebDriver driver = new FirefoxDriver();
 		
 		// Selenium actions
 		driver.navigate().to(google);
