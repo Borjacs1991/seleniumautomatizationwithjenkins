@@ -13,6 +13,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
 public class NewTest {
@@ -57,6 +58,35 @@ public class NewTest {
   @Test
   public void sendTestFirefox() {
 	  
+	  // Logger
+		Date date = new Date();
+		BasicConfigurator.configure();
+		Logger OurLogger = LogManager.getLogger("OurLogger");
+		
+	    FileAppender fileAppender = new FileAppender();
+	    fileAppender.setFile("FirefoxLogfile.txt");
+	    fileAppender.setLayout(new SimpleLayout());
+	 
+	    OurLogger.addAppender(fileAppender);
+	    fileAppender.activateOptions();
+	    
+	    // Selenium
+		System.setProperty("webdriver.chrome.driver","C:\\Driver\\geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+		
+		// Selenium actions
+		driver.navigate().to(google);
+		driver.findElement(By.name("q")).sendKeys("Spring");
+		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+		
+		List<WebElement> results = driver.findElements(By.tagName("h3"));
+		
+		for(int i = 0; i<results.size(); i++) {
+			System.out.println("Found: " + results.get(i).getText());
+			OurLogger.info(date + " Registered: " + i + ". Found:" + results.get(i).getText());
+		}
+		
+		driver.close();
   }
   
   @Test
