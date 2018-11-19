@@ -14,6 +14,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
 
 public class IETest {
@@ -22,6 +24,11 @@ public class IETest {
 
 	@Test
 	public void sendTestIE() {
+
+		DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
+
+		capabilities.setCapability(CapabilityType.BROWSER_NAME, "IE");
+		capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 
 		// Logger
 		Date date = new Date();
@@ -48,9 +55,9 @@ public class IETest {
 		final String queryText = "Spring";
 		driver.findElement(By.name(query)).sendKeys(queryText);
 		driver.findElement(By.name(query)).sendKeys(Keys.ENTER);
-		
+
 		System.out.println("Queries in input name " + query + " with value " + queryText);
-		
+
 		List<WebElement> results = driver.findElements(By.tagName("h3"));
 
 		for (int i = 0; i < results.size(); i++) {
