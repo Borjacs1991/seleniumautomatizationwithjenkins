@@ -10,7 +10,6 @@ public class FirefoxTest {
 	
 	@Test
 	public void sendFirefoxTestDriver() {
-	 System.setProperty("webdriver.gecko.driver", "C:\\Driver\\geckodriver.exe");
 	 WebDriver driver = new FirefoxDriver();
 	 driver.get("http://www.toolsqa.com");
 	 //driver.get(google);

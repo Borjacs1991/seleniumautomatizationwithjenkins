@@ -41,7 +41,7 @@ public class IETest {
 		System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
 		WebDriver driver = new InternetExplorerDriver();
 		driver.get(google);
-
+		driver.navigate().to("http://www.google.com");
 		// Selenium actions
 		/*
 		driver.navigate().to(google);
