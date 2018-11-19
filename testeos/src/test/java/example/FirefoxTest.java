@@ -1,7 +1,7 @@
 package example;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.session.FirefoxFilter;
 import org.testng.annotations.Test;
 
 public class FirefoxTest {
@@ -11,7 +11,7 @@ public class FirefoxTest {
 	@Test
 	public void sendFirefoxTestDriver() {
 		System.setProperty("webdriver.gecko.driver", "C:\\Driver\\geckodriver.exe");
-		WebDriver driver = new FirefoxDriver();
+		WebDriver driver = (WebDriver) new FirefoxFilter();
 		driver.get("http://www.toolsqa.com");
 		// driver.get(google);
 	}

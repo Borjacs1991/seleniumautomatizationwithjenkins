@@ -12,7 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.session.ChromeFilter;
 import org.testng.annotations.Test;
 
 public class ChromeTest {
@@ -36,7 +36,7 @@ public class ChromeTest {
 		    
 		    // Selenium
 			System.setProperty("webdriver.chrome.driver","C:\\Driver\\chromedriver.exe");
-			WebDriver driver = new ChromeDriver();
+			WebDriver driver = (WebDriver) new ChromeFilter();
 			
 			// Selenium actions
 			driver.navigate().to(google);
