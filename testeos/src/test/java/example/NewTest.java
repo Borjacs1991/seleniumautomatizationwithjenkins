@@ -57,6 +57,7 @@ public class NewTest {
 	    
   }
   
+  /*
   @Test
   public void sendTestFirefox() {
 	  
@@ -97,7 +98,7 @@ public class NewTest {
 		
 		driver.close();
 		
-  }
+  } */
   
   @Test
   public void sendTestSafari() {   
