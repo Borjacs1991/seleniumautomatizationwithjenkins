@@ -9,8 +9,22 @@ public class FirefoxTest {
 	private final String google = "https://www.google.es/";
 	
 	@Test
-	public void senFirefoxTest() {
+	public void sendFirefoxTestDriver() {
 	 System.setProperty("webdriver.gecko.driver", "C:\\Driver\\geckodriver.exe");
+	 WebDriver driver = new FirefoxDriver();
+	 driver.get(google);
+	 
+	 try {
+		Thread.sleep(5000);
+	} catch (InterruptedException e) {
+		e.printStackTrace();
+	}
+	 driver.quit();
+	}
+	
+	@Test
+	public void sendFirefoxTestBinary() {
+	 System.setProperty("webdriver.firefox.bin", "C:\\Driver\\geckodriver.exe");
 	 WebDriver driver = new FirefoxDriver();
 	 driver.get(google);
 	 
