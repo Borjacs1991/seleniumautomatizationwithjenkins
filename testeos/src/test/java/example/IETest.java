@@ -43,9 +43,10 @@ public class IETest {
 		driver.get(google);
 
 		// Selenium actions
+		/*
 		driver.navigate().to(google);
 		driver.findElement(By.name("q")).sendKeys("Spring");
-		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);*/
 /*
 		List<WebElement> results = driver.findElements(By.tagName("h3"));
 
