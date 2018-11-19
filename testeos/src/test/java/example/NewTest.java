@@ -14,6 +14,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.testng.annotations.Test;
 
 public class NewTest {
@@ -71,8 +72,10 @@ public class NewTest {
 	    fileAppender.activateOptions();
 	    
 	    // Selenium
-		System.setProperty("webdriver.gecko.driver","C:\\Driver\\geckodriver.exe");
-		WebDriver driver = new FirefoxDriver();
+	    WebDriver driver=null;
+	    final FirefoxProfile firefoxProfile = new FirefoxProfile();
+	    firefoxProfile.setPreference("xpinstall.signatures.required", false);
+	    driver = new FirefoxDriver(firefoxProfile);
 		
 		// Selenium actions
 		driver.navigate().to(google);
